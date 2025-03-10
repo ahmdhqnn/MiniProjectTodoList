@@ -9,36 +9,12 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.key
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 
-/**
- *
- * Custom OutlinedTextField that comes with the starter code.
- *
- * @param modifier Modifier yang akan diberikan ke OutlinedTextField.
- * @param label String untuk text yang ditampilkan diatas OutlinedTextField/
- * @param value String yang akan ditampilkan dalam OutlinedTextField.
- * @param onValueChange Fungsi yang akan dipanggil ketika value berubah.
- * @param isError Boolean yang menentukan apakah OutlinedTextField memiliki error atau tidak.
- * @param hint String yang akan ditampilkan sebagai hint jika value kosong.
- * @param supportingText text kecil yang akan ditampilkan dibawah OutlinedTextField.
- * @param leadingIcon Icon yang akan ditampilkan di sebelah kiri dari OutlinedTextField.
- * @param trailingIcon Icon yang akan ditampilkan di sebelah kanan dari OutlinedTextField.
- * @param singleLine Parameter yang membuat textfield menjadi single line.
- * @param maxLines Jumlah maksimal baris yang dapat ditampilkan dalam textfield.
- * @param minLines Jumlah minimal baris yang dapat ditampilkan dalam textfield.
- * @param readOnly Parameter yang menentukan apakah textfield hanya bisa dibaca atau tidak.
- * @param enabled Parameter yang menentukan apakah textfield aktif atau tidak.
- * @param keyboardType Jenis keyboard yang akan ditampilkan dalam textfield.
- * @param imeAction Jenis aksi untuk tombol Enter.
- * @param action Aksi yang akan diambil ketika tombol keyboard ditekan.
- *
-* */
 @Composable
 fun OutlinedTextField(
     modifier: Modifier = Modifier,

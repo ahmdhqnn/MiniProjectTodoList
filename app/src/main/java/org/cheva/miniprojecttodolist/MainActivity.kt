@@ -16,6 +16,9 @@ import org.cheva.miniprojecttodolist.navigation.RegisterScreen
 import org.cheva.miniprojecttodolist.register.RegisterScreen
 import org.cheva.miniprojecttodolist.register.RegisterViewModel
 import org.cheva.miniprojecttodolist.ui.theme.MiniProjectTodoListTheme
+import org.cheva.miniprojecttodolist.login.LoginScreen
+import org.cheva.miniprojecttodolist.login.LoginViewModel
+import org.cheva.miniprojecttodolist.navigation.LoginScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +43,15 @@ class MainActivity : ComponentActivity() {
                         composable<DashboardScreen> {
                             DashboardScreen()
                         }
-                        TODO("Definisikan LoginScreen")
+                        composable<LoginScreen> {
+                            val viewModel = viewModel<LoginViewModel>()
+                            val state by viewModel.state.collectAsStateWithLifecycle()
+                            LoginScreen(
+                                state = state,
+                                onEvent = viewModel::onEvent,
+                                onNavigate = { navController.navigate(it) }
+                            )
+                        }
                     }
                 )
             }
